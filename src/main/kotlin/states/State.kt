@@ -1,0 +1,3 @@
+package states
+
+interface State
