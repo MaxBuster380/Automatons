@@ -3,6 +3,7 @@ package runners
 import automatons.Automaton
 import events.Event
 import states.State
+import states.TerminalState
 
 interface Runner {
 	/**
@@ -18,6 +19,13 @@ interface Runner {
 	 * @return True if using apply(event) throws a NoStateException.
 	 */
 	fun canApply(event : Event) : Boolean
+
+	/**
+	 * Checks if the automaton can be terminated correctly.
+	 * @return True if one of the current states is a terminal state.
+	 * @see TerminalState
+	 */
+	fun isOver() : Boolean
 
 	/**
 	 * Returns the current states of the runner.

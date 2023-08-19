@@ -3,6 +3,7 @@ package runners
 import automatons.Automaton
 import events.Event
 import states.State
+import states.TerminalState
 
 class StandardRunner(private val automaton : Automaton, startStates : Set<State>) : Runner {
 
@@ -28,6 +29,15 @@ class StandardRunner(private val automaton : Automaton, startStates : Set<State>
 		val newStates = calculateStatesDerivate(event)
 
 		return newStates.isNotEmpty()
+	}
+
+	override fun isOver() : Boolean {
+		for(state in currentStates) {
+			if (state is TerminalState) {
+				return true
+			}
+		}
+		return false
 	}
 
 	override fun getCurrentStates() : Set<State> {
