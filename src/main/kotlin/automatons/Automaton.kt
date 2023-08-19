@@ -3,7 +3,16 @@ package automatons
 import events.Event
 import states.State
 
+/**
+ *
+ */
 interface Automaton {
+	companion object {
+		fun create():Automaton {
+			return StandardAutomaton()
+		}
+	}
+
 	/**
 	 * Adds a transition relationship between a start state, an event, and an end state.
 	 * @param startState Start state of the new transition.

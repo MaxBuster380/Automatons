@@ -13,7 +13,7 @@ class StandardAutomatonTest {
 	 */
 	@Test
 	fun addFunctionReturnsSelf() {
-		val automaton = StandardAutomaton()
+		val automaton = Automaton.create()
 
 		val state = StandardState("1")
 
@@ -29,7 +29,7 @@ class StandardAutomatonTest {
 	 */
 	@Test
 	fun derivateOnlyOutputsReleventStates() {
-		val automaton = StandardAutomaton()
+		val automaton = Automaton.create()
 
 		val state1 = StandardState("1")
 		val state2 = StandardState("2")
@@ -60,7 +60,7 @@ class StandardAutomatonTest {
 	 */
 	@Test
 	fun getEventsFrom() {
-		val automaton = StandardAutomaton()
+		val automaton = Automaton.create()
 
 		val state1 = StandardState("1")
 		val state2 = StandardState("2")
@@ -95,7 +95,7 @@ class StandardAutomatonTest {
 	 */
 	@Test
 	fun getEventsTo() {
-		val automaton = StandardAutomaton()
+		val automaton = Automaton.create()
 
 		val state1 = StandardState("1")
 		val state2 = StandardState("2")
@@ -130,7 +130,7 @@ class StandardAutomatonTest {
 	 */
 	@Test
 	fun integrateOnlyOutputsReleventStates() {
-		val automaton = StandardAutomaton()
+		val automaton = Automaton.create()
 
 		val state1 = StandardState("1")
 		val state2 = StandardState("2")
@@ -161,12 +161,11 @@ class StandardAutomatonTest {
 	 */
 	@Test
 	fun eventsBetweenOnlyGiveReleventEvents() {
-		val automaton = StandardAutomaton()
+		val automaton = Automaton.create()
 
 		val state1 = StandardState("1")
 		val state2 = StandardState("2")
 		val state3 = StandardState("3")
-		val state4 = StandardState("4")
 
 		val eventA = StandardEvent("a")
 		val eventB = StandardEvent("b")
@@ -175,8 +174,8 @@ class StandardAutomatonTest {
 		automaton
 			.add(state1, eventA, state2)
 			.add(state1, eventB, state2)
-			.add(state1, eventC, state4)
-			.add(state4, eventC, state2)
+			.add(state1, eventC, state3)
+			.add(state3, eventC, state2)
 
 		val outputSet = automaton.getEventsBetween(state1, state2)
 
