@@ -4,7 +4,7 @@ import automatons.Automaton
 import events.Event
 import states.State
 
-class StandardRunner(private val automaton : Automaton, startStates : Set<State>) {
+class StandardRunner(private val automaton : Automaton, startStates : Set<State>) : Runner {
 
 	private var currentStates : Set<State>
 
@@ -14,12 +14,7 @@ class StandardRunner(private val automaton : Automaton, startStates : Set<State>
 
 	// PUBLIC INSTANCE METHODS
 
-	/**
-	 * Changes the current states by derivating with an event.
-	 * @param event Event to derivate with.
-	 * @throws NoStateException when the runner has no current states after derivating.
-	 */
-	fun apply(event : Event) {
+	override fun apply(event : Event) {
 		val newStates = calculateStatesDerivate(event)
 
 		if (newStates.isEmpty()) {
@@ -29,30 +24,17 @@ class StandardRunner(private val automaton : Automaton, startStates : Set<State>
 		currentStates = newStates
 	}
 
-	/**
-	 * Checks if changing the current states by an event leads to an error.
-	 * @param event Event to test on.
-	 * @return True if using apply(event) throws a NoStateException.
-	 */
-	fun canApply(event : Event) : Boolean {
+	override fun canApply(event : Event) : Boolean {
 		val newStates = calculateStatesDerivate(event)
 
 		return newStates.isNotEmpty()
 	}
 
-	/**
-	 * Returns the current states of the runner.
-	 * @return the states the runner is currently in.
-	 */
-	fun getCurrentStates() : Set<State> {
+	override fun getCurrentStates() : Set<State> {
 		return currentStates
 	}
 
-	/**
-	 * Returns the runner's automaton.
-	 * @return The automaton given in the constructor of the instance.
-	 */
-	fun getAutomaton() : Automaton {
+	override fun getAutomaton() : Automaton {
 		return automaton
 	}
 
