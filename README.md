@@ -16,5 +16,4 @@ In other terms, the user is allowed to do everything by default, and it's up to 
 
 My goal with this project is to flip that around : making everything forbidden by default and specifying what you're allowed to do. In the example above, it would mean that the user can't use the application because it is not in a state where they can ("Currently Downloading").
 
-
-
+It also serves as practice for library building and project exporting.
