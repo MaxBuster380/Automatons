@@ -5,6 +5,13 @@ import events.Event
 import states.State
 import states.TerminalState
 
+/**
+ * Interface for runners.
+ * A runner is an object that runs an automaton, keeping track of the current states and changing them based on the events it receives.
+ * @see Automaton
+ * @see State
+ * @see Event
+ */
 interface Runner {
 	/**
 	 * Changes the current states by derivating with an event.
