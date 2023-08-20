@@ -3,6 +3,10 @@ package automatons
 import events.Event
 import states.State
 
+/**
+ * Basic, unoptimized implementation of Automaton.
+ * @see Automaton
+ */
 class StandardAutomaton : Automaton {
 	data class Transition(val startState : State, val event : Event, val endState : State)
 	private val transitions = mutableListOf<Transition>()

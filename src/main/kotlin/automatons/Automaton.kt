@@ -4,14 +4,9 @@ import events.Event
 import states.State
 
 /**
- *
+ * Interface for a non-deterministic finite-state machine.
  */
 interface Automaton {
-	companion object {
-		fun create():Automaton {
-			return StandardAutomaton()
-		}
-	}
 
 	/**
 	 * Adds a transition relationship between a start state, an event, and an end state.
