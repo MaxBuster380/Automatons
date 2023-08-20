@@ -5,6 +5,10 @@ import events.Event
 import states.State
 import states.TerminalState
 
+/**
+ * Basic, unoptimized implementation of Runner.
+ * @see Runner
+ */
 class StandardRunner(private val automaton : Automaton, startStates : Set<State>) : Runner {
 
 	private var currentStates : Set<State>
