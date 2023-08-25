@@ -1,0 +1,1 @@
+A high level automaton is an Automaton implementation that can take in an automaton instance to add behaviours or properties to it.

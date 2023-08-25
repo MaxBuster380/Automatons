@@ -1,5 +1,7 @@
-package automatons
+package automatons.highlevelautomatons
 
+import automatons.Automaton
+import automatons.StandardAutomaton
 import events.Event
 import states.State
 
