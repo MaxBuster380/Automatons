@@ -33,6 +33,14 @@ class DeterministicAutomaton(
 
 	// PUBLIC INSTANCE METHODS - INTERFACE Automaton
 
+	/**
+	 * Adds a transition relationship between a start state, an event, and an end state.
+	 * @param startState Start state of the new transition.
+	 * @param event Event of the new transition.
+	 * @param endState End state of the new transition.
+	 * @return This instance of Automaton for successive calls.
+	 * @throws DuplicateTransitionException when (startState, event) is already defined.
+	 */
 	override fun add(startState: State, event: Event, endState: State): Automaton {
 		val transitionAlreadyDefined = derivate(startState, event).isNotEmpty()
 		if (!transitionAlreadyDefined) {
