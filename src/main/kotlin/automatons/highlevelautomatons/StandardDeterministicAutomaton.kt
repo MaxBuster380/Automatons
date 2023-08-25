@@ -10,7 +10,7 @@ import states.State
  * A deterministic automaton is an automaton that can't be in multiple states at a time.
  * This implementation will disable having multiple transitions with equal start state and event.
  */
-class DeterministicAutomaton(
+class StandardDeterministicAutomaton(
 	private val subAutomaton : Automaton
 ) : Automaton {
 	constructor() : this(StandardAutomaton())
