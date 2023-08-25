@@ -4,10 +4,14 @@ import events.Event
 import states.State
 
 /**
+ * Interface for a deterministic finite-state machine.
  * A deterministic automaton is an automaton that can't be in multiple states at a time.
+ *
+ * @see [https://en.wikipedia.org/wiki/Deterministic_finite_automaton]
  * @see Automaton
  */
 interface DeterministicAutomaton : Automaton {
+
 	/**
 	 * Finds the state inserted in relation to a given start state and an event.
 	 * Pattern : (Start State, Event) -> (End State)

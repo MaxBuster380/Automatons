@@ -5,8 +5,8 @@ import states.State
 
 /**
  * Interface for a non-deterministic finite-state machine.
- * @see State
- * @see Event
+ *
+ * @see [https://en.wikipedia.org/wiki/Finite-state_machine]
  */
 interface Automaton {
 
