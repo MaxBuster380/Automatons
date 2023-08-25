@@ -129,3 +129,4 @@ outTmp/
 /kotlin-native/dist
 kotlin-ide/
 .idea/artifacts/Automatons_jar.xml
+src/main/kotlin/Main.kt
