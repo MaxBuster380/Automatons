@@ -42,7 +42,7 @@ class DeterministicAutomaton(
 	 * @throws DuplicateTransitionException when (startState, event) is already defined.
 	 */
 	override fun add(startState: State, event: Event, endState: State): Automaton {
-		val transitionAlreadyDefined = derivate(startState, event).isNotEmpty()
+		val transitionAlreadyDefined = subAutomaton.derivate(startState, event).isNotEmpty()
 		if (!transitionAlreadyDefined) {
 			throw DuplicateTransitionException("(${startState}, ${event}) is already defined.")
 		}
