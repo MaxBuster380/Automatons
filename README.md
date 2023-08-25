@@ -8,6 +8,43 @@ An automaton is a set of states connected to each other via events, allowing a s
 
 The most known use of automatons is the **regular expression**, where the events are the letters successively being read.
 
+### Use this library
+
+__Gradle__
+
+```groovy
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+
+```groovy
+dependencies {
+    implementation 'com.github.MaxBuster380:Automatons:alpha-1.0.0'
+}
+```
+
+__Maven__ 
+```xml
+<repositories>
+	<repository>
+	    <id>jitpack.io</id>
+	    <url>https://jitpack.io</url>
+	</repository>
+</repositories>
+```
+
+```xml
+<dependency>
+    <groupId>com.github.MaxBuster380</groupId>
+    <artifactId>Automatons</artifactId>
+    <version>alpha-1.0.0</version>
+</dependency>
+```
+
 ### Why make this project ?
 
 I've noticed that, in software development, a lot of bugs come from the user being allowed to do too much, for example when they continue to use the application while a crucial download is ongoing. 
