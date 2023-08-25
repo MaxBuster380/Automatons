@@ -3,6 +3,7 @@ package automatons.highlevelautomatons
 import automatons.Automaton
 import automatons.StandardAutomaton
 import events.Event
+import exceptions.DuplicateTransitionException
 import states.State
 
 /**

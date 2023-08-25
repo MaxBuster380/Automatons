@@ -2,6 +2,7 @@ package runners
 
 import automatons.Automaton
 import events.Event
+import exceptions.NoStateException
 import states.State
 import states.TerminalState
 

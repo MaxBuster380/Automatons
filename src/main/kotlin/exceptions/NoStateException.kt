@@ -1,4 +1,4 @@
-package runners
+package exceptions
 
 /**
  * Exception thrown when a runner has no current states, and thus can not run anymore.
