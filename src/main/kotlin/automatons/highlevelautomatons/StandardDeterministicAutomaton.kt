@@ -29,7 +29,7 @@ class StandardDeterministicAutomaton(
 	}
 
 	// PUBLIC INSTANCE METHODS - INTERFACE Automaton
-	
+
 	override fun add(startState: State, event: Event, endState: State): Automaton {
 		val transitionAlreadyDefined = subAutomaton.derivate(startState, event).isNotEmpty()
 		if (!transitionAlreadyDefined) {

@@ -1,6 +1,5 @@
 package automatons
 
-import automatons.Automaton
 import events.Event
 import states.State
 
