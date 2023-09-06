@@ -42,7 +42,7 @@ allprojects {
 
 ```gradle
 dependencies {
-    implementation 'com.github.MaxBuster380:Automatons:alpha-1.1.1'
+    implementation 'com.github.MaxBuster380:Automatons:alpha-1.2.0'
 }
 ```
 
@@ -62,7 +62,7 @@ In `pom.xml` :
 <dependency>
     <groupId>com.github.MaxBuster380</groupId>
     <artifactId>Automatons</artifactId>
-    <version>alpha-1.1.1</version>
+    <version>alpha-1.2.0</version>
 </dependency>
 ```
 
