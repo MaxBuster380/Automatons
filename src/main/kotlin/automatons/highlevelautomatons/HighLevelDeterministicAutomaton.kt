@@ -11,7 +11,7 @@ import states.State
  * Basic, unoptimized implementation of DeterministicAutomaton.
  * @see DeterministicAutomaton
  */
-class StandardDeterministicAutomaton(
+class HighLevelDeterministicAutomaton(
 	private val subAutomaton : Automaton
 ) : DeterministicAutomaton {
 	constructor() : this(StandardAutomaton())
