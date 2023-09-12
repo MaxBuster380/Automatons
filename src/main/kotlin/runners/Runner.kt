@@ -29,6 +29,14 @@ interface Runner {
 	fun canApply(event : Event) : Boolean
 
 	/**
+	 * Checks if the runner is in the given state.
+	 * Remember that non-deterministic automatons can lead to a runner being in multiple states.
+	 * @param state State to check for.
+	 * @return True only if the given state is one of the current states.
+	 */
+	fun isInState(state : State) : Boolean
+
+	/**
 	 * Checks if the automaton can be terminated correctly.
 	 * @return True if one of the current states is a terminal state.
 	 * @see TerminalState

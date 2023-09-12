@@ -37,6 +37,10 @@ class SetRunner(private val automaton : Automaton, startStates : Set<State>) : R
 		return newStates.isNotEmpty()
 	}
 
+	override fun isInState(state: State): Boolean {
+		return getCurrentStates().contains(state)
+	}
+
 	override fun isOver() : Boolean {
 		for(state in currentStates) {
 			if (state is TerminalState) {
