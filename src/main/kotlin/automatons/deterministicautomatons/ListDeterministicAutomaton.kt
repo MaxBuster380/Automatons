@@ -11,7 +11,7 @@ import states.State
  * @see List
  */
 class ListDeterministicAutomaton : DeterministicAutomaton {
-    data class Transition(val startState: State, val event: Event, val endState: State)
+    private data class Transition(val startState: State, val event: Event, val endState: State)
 
     private val transitions = mutableListOf<Transition>()
 

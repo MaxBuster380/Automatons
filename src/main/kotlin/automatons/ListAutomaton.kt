@@ -9,7 +9,7 @@ import states.State
  * @see List
  */
 class ListAutomaton : Automaton {
-	data class Transition(val startState : State, val event : Event, val endState : State)
+	private data class Transition(val startState : State, val event : Event, val endState : State)
 	private val transitions = mutableListOf<Transition>()
 
 	// PUBLIC INSTANCE METHODS
