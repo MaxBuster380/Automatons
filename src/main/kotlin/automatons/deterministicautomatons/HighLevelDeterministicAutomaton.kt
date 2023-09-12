@@ -4,16 +4,23 @@ import automatons.Automaton
 import automatons.ListAutomaton
 import events.Event
 import exceptions.DuplicateTransitionException
+import exceptions.RedundantEncapsulation
 import states.State
 
 /**
- * Basic, unoptimized implementation of DeterministicAutomaton.
+ * Adds deterministic logic to a given instance of Automaton.
  * @see DeterministicAutomaton
  */
 class HighLevelDeterministicAutomaton(
 	private val subAutomaton : Automaton
 ) : DeterministicAutomaton {
 	constructor() : this(ListAutomaton())
+
+	init {
+		if (subAutomaton is DeterministicAutomaton) {
+			throw RedundantEncapsulation("The sub-automaton is already a DeterministicAutomaton.")
+		}
+	}
 
 	// PUBLIC INSTANCE METHODS
 
