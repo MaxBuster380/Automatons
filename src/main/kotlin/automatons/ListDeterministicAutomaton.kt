@@ -4,11 +4,12 @@ import events.Event
 import states.State
 
 /**
- * Basic, unoptimized implementation of DeterministicAutomaton.
- * Same implementation as StandardAutomaton, with determinism logic added.
+ * Implementation of DeterministicAutomaton using an unordered list.
+ * Same implementation as ListAutomaton, with determinism logic added.
  * @see DeterministicAutomaton
+ * @see List
  */
-class StandardDeterministicAutomaton : DeterministicAutomaton {
+class ListDeterministicAutomaton : DeterministicAutomaton {
     data class Transition(val startState: State, val event: Event, val endState: State)
 
     private val transitions = mutableListOf<Transition>()

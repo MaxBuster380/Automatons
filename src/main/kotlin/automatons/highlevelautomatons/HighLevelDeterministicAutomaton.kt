@@ -2,7 +2,7 @@ package automatons.highlevelautomatons
 
 import automatons.Automaton
 import automatons.DeterministicAutomaton
-import automatons.StandardAutomaton
+import automatons.ListAutomaton
 import events.Event
 import exceptions.DuplicateTransitionException
 import states.State
@@ -14,7 +14,7 @@ import states.State
 class HighLevelDeterministicAutomaton(
 	private val subAutomaton : Automaton
 ) : DeterministicAutomaton {
-	constructor() : this(StandardAutomaton())
+	constructor() : this(ListAutomaton())
 
 	// PUBLIC INSTANCE METHODS
 

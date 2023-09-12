@@ -7,10 +7,11 @@ import states.State
 import states.TerminalState
 
 /**
- * Basic, unoptimized implementation of Runner.
+ * Implementation of Runner using a set.
  * @see Runner
+ * @see Set
  */
-class StandardRunner(private val automaton : Automaton, startStates : Set<State>) : Runner {
+class SetRunner(private val automaton : Automaton, startStates : Set<State>) : Runner {
 
 	private var currentStates : Set<State>
 

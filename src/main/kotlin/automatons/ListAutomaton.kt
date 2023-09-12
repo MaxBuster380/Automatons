@@ -4,10 +4,11 @@ import events.Event
 import states.State
 
 /**
- * Basic, unoptimized implementation of Automaton.
+ * Implementation of Automaton using an unordered list.
  * @see Automaton
+ * @see List
  */
-class StandardAutomaton : Automaton {
+class ListAutomaton : Automaton {
 	data class Transition(val startState : State, val event : Event, val endState : State)
 	private val transitions = mutableListOf<Transition>()
 
