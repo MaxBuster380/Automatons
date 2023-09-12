@@ -2,6 +2,7 @@ package automatons.deterministicautomatons
 
 import automatons.Automaton
 import events.Event
+import exceptions.DuplicateTransitionException
 import states.State
 
 /**
@@ -32,6 +33,11 @@ class ListDeterministicAutomaton : DeterministicAutomaton {
 
     override fun add(startState: State, event: Event, endState: State): Automaton {
         val newTransition = Transition(startState, event, endState)
+
+        val transitionAlreadyDefined = derivateSingle(startState, event) != null
+        if (transitionAlreadyDefined) {
+            throw DuplicateTransitionException("(${startState}, ${event}) is already defined.")
+        }
 
         if (!isRedundant(newTransition)) {
             transitions += newTransition
