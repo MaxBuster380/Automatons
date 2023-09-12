@@ -1,7 +1,6 @@
-package automatons.highlevelautomatons
+package automatons.deterministicautomatons
 
 import automatons.Automaton
-import automatons.DeterministicAutomaton
 import automatons.ListAutomaton
 import events.Event
 import exceptions.DuplicateTransitionException

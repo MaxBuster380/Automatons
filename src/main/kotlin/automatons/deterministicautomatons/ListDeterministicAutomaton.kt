@@ -1,5 +1,6 @@
-package automatons
+package automatons.deterministicautomatons
 
+import automatons.Automaton
 import events.Event
 import states.State
 
