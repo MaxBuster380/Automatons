@@ -7,6 +7,7 @@ import states.State
 
 /**
  * Implementation of DeterministicAutomaton using a set.
+ * Same implementation as SetAutomaton, with determinism logic added.
  * @see DeterministicAutomaton
  * @see Set
  */
