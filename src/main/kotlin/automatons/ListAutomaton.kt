@@ -7,6 +7,7 @@ import states.State
  * Implementation of Automaton using an unordered list.
  * @see Automaton
  * @see List
+ * @Deprecated
  */
 class ListAutomaton : Automaton {
 	private data class Transition(val startState : State, val event : Event, val endState : State)

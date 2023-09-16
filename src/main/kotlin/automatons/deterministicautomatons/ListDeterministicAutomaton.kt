@@ -10,6 +10,7 @@ import states.State
  * Same implementation as ListAutomaton, with determinism logic added.
  * @see DeterministicAutomaton
  * @see List
+ * @Deprecated
  */
 class ListDeterministicAutomaton : DeterministicAutomaton {
     private data class Transition(val startState: State, val event: Event, val endState: State)
