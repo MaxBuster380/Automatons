@@ -50,4 +50,12 @@ class HighLevelDeterministicAutomaton(
 	override fun derivate(startState: State, event: Event): Set<State> {
 		return subAutomaton.derivate(startState, event)
 	}
+
+	override fun getStates(): Set<State> {
+		return subAutomaton.getStates()
+	}
+
+	override fun getEvents(): Set<Event> {
+		return subAutomaton.getEvents()
+	}
 }

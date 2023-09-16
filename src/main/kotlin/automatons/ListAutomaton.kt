@@ -36,6 +36,17 @@ class ListAutomaton : Automaton {
 		return res
 	}
 
+	override fun getStates(): Set<State> {
+		val startStates = transitions.map { it.startState }.toSet()
+		val endStates = transitions.map { it.endState }.toSet()
+
+		return startStates + endStates
+	}
+
+	override fun getEvents(): Set<Event> {
+		return transitions.map { it.event }.toSet()
+	}
+
 	// PRIVATE INSTANCE METHODS
 
 	/**
