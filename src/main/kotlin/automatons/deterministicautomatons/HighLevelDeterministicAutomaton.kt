@@ -50,36 +50,4 @@ class HighLevelDeterministicAutomaton(
 	override fun derivate(startState: State, event: Event): Set<State> {
 		return subAutomaton.derivate(startState, event)
 	}
-
-	override fun getEventsFrom(startState: State): Set<Event> {
-		return subAutomaton.getEventsFrom(startState)
-	}
-
-	override fun getEventsTo(endState: State): Set<Event> {
-		return subAutomaton.getEventsTo(endState)
-	}
-
-	override fun integrate(event: Event, endState: State): Set<State> {
-		return subAutomaton.integrate(event, endState)
-	}
-
-	override fun getEventsBetween(startState: State, endState: State): Set<Event> {
-		return subAutomaton.getEventsBetween(startState, endState)
-	}
-
-	override fun getEndStatesFrom(startState: State): Set<State> {
-		return subAutomaton.getEndStatesFrom(startState)
-	}
-
-	override fun getStartStatesFrom(endState: State): Set<State> {
-		return subAutomaton.getStartStatesFrom(endState)
-	}
-
-	override fun getEventDestinations(event: Event): Set<State> {
-		return subAutomaton.getEventDestinations(event)
-	}
-
-	override fun getEventOrigins(event: Event): Set<State> {
-		return subAutomaton.getEventOrigins(event)
-	}
 }
