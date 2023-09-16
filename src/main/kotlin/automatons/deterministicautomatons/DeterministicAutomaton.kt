@@ -1,6 +1,7 @@
 package automatons.deterministicautomatons
 
 import automatons.Automaton
+import automatons.SetDeterministicAutomaton
 import events.Event
 import states.State
 
@@ -12,6 +13,17 @@ import states.State
  * @see Automaton
  */
 interface DeterministicAutomaton : Automaton {
+
+	companion object {
+		/**
+		 * Creates a new instance of DeterministicAutomaton.
+		 *
+		 * @return A new object implementing the DeterministicAutomaton interface.
+		 */
+		fun new() : Automaton {
+			return SetDeterministicAutomaton()
+		}
+	}
 
 	/**
 	 * Finds the state inserted in relation to a given start state and an event.

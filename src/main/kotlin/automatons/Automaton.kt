@@ -10,6 +10,17 @@ import states.State
  */
 interface Automaton {
 
+	companion object {
+		/**
+		 * Creates a new instance of Automaton.
+		 *
+		 * @return A new object implementing the Automaton interface.
+		 */
+		fun new() : Automaton {
+			return SetAutomaton()
+		}
+	}
+
 	/**
 	 * Adds a transition relationship between a start state, an event, and an end state.
 	 * @param startState Start state of the new transition.
