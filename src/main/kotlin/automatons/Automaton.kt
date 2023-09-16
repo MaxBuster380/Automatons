@@ -41,7 +41,7 @@ interface Automaton {
 	/**
 	 * Returns all the automaton's states.
 	 *
-	 * @return All the states that have been added to the automaton, as start state or end state.
+	 * @return A set of all the states that have been added to the automaton, as start state or end state.
 	 * @see add
 	 */
 	fun getStates() : Set<State>
@@ -49,7 +49,7 @@ interface Automaton {
 	/**
 	 * Returns all the automaton's events.
 	 *
-	 * @return All the events that have been added to the automaton.
+	 * @return A set of all the events that have been added to the automaton.
 	 * @see add
 	 */
 	fun getEvents() : Set<Event>
